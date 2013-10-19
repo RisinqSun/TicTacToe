@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tic Tac Toe</title>
+</head>
+<meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<script type="text/javascript" src="3rdparty/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="3rdparty/jquery-ui.js"></script>
+<script type="text/javascript" src="model.js"></script>
+<script type="text/javascript" src="engine.js"></script>
+<script type="text/javascript" src="KIRA.js"></script>
+<script type="text/javascript" src="KITE.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<body>
+	<!-- start window with name fields -->
+	<div id="start_page" class="start_page" align="center">
+		<form id="start_window" class="start_window">
+			<div class="start_left_box">
+				<div class="start_x_mark"></div>
+				<p>
+					<input id="player_x_text" class='start_input' type='text' size='20'
+						maxlength='20' value="player x"><br> <input
+						id='start_radio_x_person' name='player_x_radio' value="PERSON"
+						type='radio' size='20' maxlength='20'> human<br> <input
+						name='player_x_radio' value="0" type='radio' size='20'
+						maxlength='20'> random KI <br> <input
+						name='player_x_radio' value="1" type='radio' size='20'
+						maxlength='20' checked> intelligent KI
+				</p>
+			</div>
+			<div class="start_right_box">
+				<div class="start_o_mark"></div>
+				<p>
+					<input id="player_o_text" class='start_input' type='text' size='20'
+						maxlength='20' value="player o"><br> <input
+						id='start_radio_o_person' name='player_o_radio' value="PERSON"
+						type='radio' size='20' maxlength='20'> human<br> <input
+						name='player_o_radio' value="0" type='radio' size='20'
+						maxlength='20'> random KI <br> <input
+						name='player_o_radio' value="1" type='radio' size='20'
+						maxlength='20' checked> intelligent KI
+				</p>
+			</div>
+			<input id="start_button" class="start_button" type="button"
+				name="start" onclick="config.execute();" value="START" />
+		</form>
+	</div>
+
+	<!-- game board with header -->
+	<div id="game_page" class="game_page" align="center">
+		<div class="game_window">
+			<div class="game_banner"></div>
+			<!-- <img class="game_media" src="media/letter2.png" />
+			 <div class="game_box" align="left"></div> -->
+			<div class="game_board" align="left">
+				<div class="game_row">
+					<div id="id-0-0" class="game_field"></div>
+					<div id="id-1-0" class="game_field"></div>
+					<div id="id-2-0" class="game_field"></div>
+				</div>
+				<div class="game_row">
+					<div id="id-0-1" class="game_field"></div>
+					<div id="id-1-1" class="game_field"></div>
+					<div id="id-2-1" class="game_field"></div>
+				</div>
+				<div class="game_row">
+					<div id="id-0-2" class="game_field"></div>
+					<div id="id-1-2" class="game_field"></div>
+					<div id="id-2-2" class="game_field"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--  window for end status  -->
+	<div id="end_page" class="end_page" align="center">
+		<div class="end_window">
+			<div class="end_box"></div>
+			<button class="end_button" name="restart" onclick="location.reload()">AGAIN</button>
+		</div>
+	</div>
+</body>
+</html>
